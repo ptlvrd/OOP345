@@ -1,0 +1,21 @@
+/*
+Name- Vrundaben vijaykumar patel
+id-158605220
+email-vvpatel20@myseneca.ca
+workshop2-part2
+OPP344 section:NCC
+date 28/01/2024
+I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+*/
+In completing this workshop, I have learned about implementing move semantics in C++. The significant time difference between copy and move operations is because copy operations involve expensive
+deep copies of objects, while move operations transfer ownership of resources by simply copying the pointers to those resources. This makes move operations significantly faster than copy operations
+
+To read the input file (gutenberg_shakespeare) in the StringSet constructor and populate the dynamic array, the approach taken was that to first count the number of strings in the file by iterating through
+it using `getline` and counting the occurrences of the delimiter. Then, the file is reset using `clear` and `seekg` to the beginning. Finally, the array is dynamically allocated with the appropriate
+size, and the strings from the file are read into the array using another loop.
+
+The `std::chrono::steady_clock` and `std::chrono::system_clock` are both clock types provided by the `<chrono>` library. The difference between them is that `steady_clock` provides a monotonic clock 
+that cannot be adjusted, while `system_clock` is affected by adjustments to the system time, like the ones performed for daylight saving time. 
+
+The `steady_clock` is used when measuring time intervals or durations, as it provides consistent and reliable results. On the other hand, `system_clock` is used when working with calendar time, like 
+obtaining the current local time or converting between calendar time and `time_point`.

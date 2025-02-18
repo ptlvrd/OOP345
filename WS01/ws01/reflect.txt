@@ -1,0 +1,25 @@
+Throughout this workshop, I gained a deeper understanding of static and extern variables, as well as the distinction between internal and external linkage.
+/*
+Name- Vrundaben vijaykumar patel
+id-158605220
+email-vvpatel20@myseneca.ca
+workshop1-part2
+OPP344 section:NCC
+date 20/01/2024
+I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+*/
+An example of an external linkage would be the `g_sysClock` variable in the `event.cpp` file. It is declared as an extern variable in the `event.h` header file and initialized
+to 0 in the `event.cpp` file. This variable can be accessed and modified from both the main program and the `Event` class, making it useful for tracking the system clock time globally.
+
+On the other hand, an example of internal linkage can be found in the `Event` class itself. The `description` variable, which stores the event description, is a member variable of the 
+class and has internal linkage. It can only be accessed within the scope of the `Event` class object.
+
+the `display()` function in `event.cpp` includes a static variable `counter`. This variable is declared as `static int counter = 1;` inside the function. The static keyword means that 
+the variable is only initialized once and persists across multiple function calls.
+
+The upgrade made to the `Event` class involved accepting a C-style null-terminated string of any length as the event description. This was achieved using dynamic memory allocation to 
+allocate memory for the description. I updated the `set()` function to delete any previously allocated memory and allocate new memory of the appropriate length. This ensures that the 
+description is stored in dynamically allocated memory, preventing any potential memory leaks.
+
+Overall, this workshop served as a valuable learning experience in understanding static and extern variables, as well as internal and external linkage. It also reinforced the importance
+of dynamic memory allocation and proper memory management to avoid memory leaks in C++ programs.

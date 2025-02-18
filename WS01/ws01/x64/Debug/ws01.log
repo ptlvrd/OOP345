@@ -1,0 +1,5 @@
+﻿  event.cpp
+C:\Users\saumi\Desktop\vrunda\courses\OOP344\OOP-Workshops-main\WS01\ws01\event.cpp(84,16): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
+  w1_p2.cpp
+  Generating Code...
+  ws01.vcxproj -> C:\Users\saumi\Desktop\vrunda\courses\OOP344\OOP-Workshops-main\WS01\x64\Debug\ws01.exe
