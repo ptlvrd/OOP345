@@ -1,0 +1,31 @@
+/*
+Name- Vrundaben vijaykumar patel
+id-158605220
+email-vvpatel20@myseneca.ca
+workshop7-part2
+OPP344 section:NCC
+date 16/03/2024
+I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+*/
+I have utilized several STL functions which include `std::for_each`, `std::sort`, `std::replace_if`, `std::any_of`, `std::copy_if`, and `std::distance`. 
+- I chose `std::for_each` to iterate over the collection of songs in the `display` function because it allows concise code and lambda expressions for processing each element efficiently.
+- `std::sort` was chosen in the `sort` function to sort the song collection based on the specified field (album, length, or title). It provides a simple and efficient way to sort elements and improves 
+readability.
+- In the `cleanAlbum` function, `std::replace_if` was used to replace the albums with "[None]" with an empty string efficiently for cleanliness.
+- `std::any_of` was employed in the `inCollection` function to efficiently check if any song in the collection is by a specific artist.
+- For filtering songs by a specific artist in `getSongsForArtist`, `std::copy_if` was chosen to copy elements that meet the specified criteria efficiently.
+- The use of `std::distance` in resizing the `songlist` ensures that only valid elements are kept, enhancing reliability.
+
+Using STL algorithms over manual loops offers several advantages, such as improved readability, reusability, and maintainability of the code. STL algorithms come with optimized implementations and 
+are part of a well-tested library, reducing the chances of bugs compared to manually implemented loops.
+
+Below is the code for the sorting. As we can see, I already implemented that if client put invalid field, it sorts the collection by using title as default.
+I did it because title is just the first column.
+
+std::sort(m_songs.begin(), m_songs.end(), [&field](const Song& song1, const Song& song2)
+			{
+				if (field == "album") return song1.m_album < song2.m_album;
+				else if (field == "length") return song1.m_length < song2.m_length;
+				else return song1.m_title < song2.m_title;
+			}
+		);
